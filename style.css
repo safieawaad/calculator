@@ -10,14 +10,15 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     border: solid aqua 2px;
+    gap: 2px;
 }
 
 .button-row {
     display: flex;
-    gap: 5px;
+    gap: 10px;
 }
 
 .button {
