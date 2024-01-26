@@ -5,6 +5,22 @@ body {
     min-height: 100vh;
 }
 
+#calc {
+    border: solid aqua 2px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 260px;
+    height: 360px;
+}
+
+#screen {
+    border: solid aqua 2px;
+    width: 220px;
+    height: 80px;
+}
+
 #buttons-container {
     display: flex;
     justify-content: center;
