@@ -3,22 +3,26 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background-color: black;
 }
 
 #calc {
-    border: solid aqua 2px;
+    background-color: #bdbdbd;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 260px;
-    height: 360px;
+    width: 240px;
+    height: 350px;
+    gap: 15px;
+    border-radius: 10px;
 }
 
 #screen {
-    border: solid aqua 2px;
-    width: 220px;
+    background-color: #ffffff;
+    width: 200px;
     height: 80px;
+    border-radius: 5px;
 }
 
 #buttons-container {
@@ -28,8 +32,8 @@ body {
     flex-wrap: wrap;
     width: 220px;
     height: 220px;
-    border: solid aqua 2px;
     gap: 2px;
+    background-color: #bdbdbd;
 }
 
 .button-row {
@@ -44,4 +48,18 @@ body {
     width: 20px;
     height: 20px;
     padding: 20px;
+    font-size: 17px;
+    border: 0px;
+    font-weight: 900;
+    border-radius: 5px;
+}
+
+.operatorbtn {
+    background-color: #2e2e2e;
+    color: white;
+}
+
+.clearbtn {
+    background-color: #d20000;
+    color: white;
 }
