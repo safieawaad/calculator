@@ -1,10 +1,11 @@
+const screenPara = document.getElementById('screen-para');
 const buttonsContainer = document.getElementById('buttons-container');
 const buttonsArray = Array.from(buttonsContainer.querySelectorAll('button'));
-let firstRow = 7; let secondRow = 4; let thirdRow = 1;
+const btnObj = declareButtons(buttonsArray);
 
-let btnObj = declareButtons(buttonsArray);
-
+/* ----- Declare all buttons inside an object ----- */
 function declareButtons(buttonsArray, obj = {}) {
+    let firstRow = 7; let secondRow = 4; let thirdRow = 1;
     for (let i = 0; i <= 16; i++) {
         if (i >= 0 && i <= 2) {
             obj[`btn${firstRow}`] = buttonsArray[i];
@@ -34,6 +35,7 @@ function declareButtons(buttonsArray, obj = {}) {
     return obj;
 }
 
+/* ----- Operations Functions ----- */
 function addNumbers(num1, num2) { return num1 + num2 }
 function subtractNumbers(num1, num2) { return num1 - num2 }
 function multiplyNumbers(num1, num2) { return num1 * num2 }

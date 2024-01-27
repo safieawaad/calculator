@@ -25,6 +25,11 @@ body {
     border-radius: 5px;
 }
 
+#screen-para {
+    font-size: 36px;
+    margin-left: 10px;
+}
+
 #buttons-container {
     display: flex;
     justify-content: center;
