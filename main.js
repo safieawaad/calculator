@@ -40,6 +40,10 @@ const buttonsObj = {
 const btn = buttonsObj.declareButtons();
 /* ----- End: Declare all buttons inside an object ----- */
 
+/* ----- Start: Program ----- */
+
+/* ----- End: Program ----- */
+
 /* ----- Start: Operations Functions ----- */
 function addNumbers(num1, num2) { return num1 + num2 }
 function subtractNumbers(num1, num2) { return num1 - num2 }
