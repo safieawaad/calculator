@@ -1,6 +1,9 @@
 /* ----- Start: Declarations ----- */
 const screenPara = document.getElementById('screen-para');
 const buttonsContainer = document.getElementById('buttons-container');
+let num1;
+let num2;
+let opertator;
 /* ----- End: Declarations ----- */
 
 /* ----- Start: Declare all buttons inside an object ----- */
@@ -36,12 +39,22 @@ const buttonsObj = {
         }
         return obj;
     }
-}
+};
 const btn = buttonsObj.declareButtons();
 /* ----- End: Declare all buttons inside an object ----- */
 
 /* ----- Start: Program ----- */
-
+function operate(num1, num2, opertator) {
+    if (opertator === btn.btnPlus) {
+        return addNumbers(num1, num2);
+    } else if (opertator === btn.btnMinus) {
+        return subtractNumbers(num1, num2);
+    } else if (opertator === btn.btnTimes) {
+        return multiplyNumbers(num1, num2);
+    } else if (opertator === btn.btnDivision) {
+        return divideNumbers(num1, num2);
+    }
+}
 /* ----- End: Program ----- */
 
 /* ----- Start: Operations Functions ----- */
