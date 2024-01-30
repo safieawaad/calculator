@@ -44,7 +44,9 @@ const btn = buttonsObj.declareButtons();
 /* ----- End: Declare all buttons inside an object ----- */
 
 /* ----- Start: Program ----- */
-function operate(num1, num2, opertator) {
+function operate(enum1, enum2, opertator) {
+    num1 = Number(enum1);
+    num2 = Number(enum2);
     if (opertator === btn.btnPlus) {
         return addNumbers(num1, num2);
     } else if (opertator === btn.btnMinus) {
@@ -55,6 +57,52 @@ function operate(num1, num2, opertator) {
         return divideNumbers(num1, num2);
     }
 }
+
+buttonsContainer.addEventListener('click', (e) => {
+    if (e.target === btn.btn0) {
+        screenPara.textContent += '0';
+    } else if (e.target === btn.btn1) {
+        screenPara.textContent += '1';
+    } else if (e.target === btn.btn2) {
+        screenPara.textContent += '2';
+    } else if (e.target === btn.btn3) {
+        screenPara.textContent += '3';
+    } else if (e.target === btn.btn4) {
+        screenPara.textContent += '4';
+    } else if (e.target === btn.btn5) {
+        screenPara.textContent += '5';
+    } else if (e.target === btn.btn6) {
+        screenPara.textContent += '6';
+    } else if (e.target === btn.btn7) {
+        screenPara.textContent += '7';
+    } else if (e.target === btn.btn8) {
+        screenPara.textContent += '8';
+    } else if (e.target === btn.btn9) {
+        screenPara.textContent += '9';
+    } else if (e.target === btn.btnClear) {
+        screenPara.textContent = '';
+    } else if (e.target === btn.btnPlus) {
+        num1 = screenPara.textContent;
+        opertator = btn.btnPlus;
+        screenPara.textContent = '';
+    } else if (e.target === btn.btnMinus) {
+        num1 = screenPara.textContent;
+        opertator = btn.btnMinus;
+        screenPara.textContent = '';
+    } else if (e.target === btn.btnTimes) {
+        num1 = screenPara.textContent;
+        opertator = btn.btnTimes;
+        screenPara.textContent = '';
+    } else if (e.target === btn.btnDivision) {
+        num1 = screenPara.textContent;
+        opertator = btn.btnDivision;
+        screenPara.textContent = '';
+    } else if (e.target === btn.btnEqual) {
+        num2 = screenPara.textContent;
+        result = operate(num1, num2, opertator);
+        screenPara.textContent = `${result}`;
+    }
+});
 /* ----- End: Program ----- */
 
 /* ----- Start: Operations Functions ----- */
