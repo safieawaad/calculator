@@ -21,13 +21,8 @@ body {
 #screen {
     background-color: #ffffff;
     width: 200px;
-    height: 80px;
+    height: 60px;
     border-radius: 5px;
-}
-
-#screen-para {
-    font-size: 36px;
-    margin-left: 10px;
 }
 
 #buttons-container {
