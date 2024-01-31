@@ -19,10 +19,15 @@ body {
 }
 
 #screen {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     background-color: #ffffff;
-    width: 200px;
-    height: 60px;
+    width: 190px;
+    height: 65px;
+    padding-right: 8px;
     border-radius: 5px;
+    font-size: 45px;
 }
 
 #buttons-container {
@@ -59,7 +64,7 @@ body {
     color: white;
 }
 
-.clearbtn {
+#clear-button {
     background-color: #d20000;
     color: white;
 }
