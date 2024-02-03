@@ -1,5 +1,8 @@
 const SCREEN = document.getElementById('screen');
 const BUTTONS_CONTAINER = document.getElementById('buttons-container');
+let screenNum;
+let result;
+let operator;
 
 /* Operations functions */
 function addNumbers(result, screenNum) { return result + screenNum }
@@ -30,6 +33,14 @@ BUTTONS_CONTAINER.addEventListener('click', e => {
         for (let i = 0; i <= 13; i++) {
             if (TARGET_VALUE <= 9) {
                 populateDisplay(TARGET_VALUE);
+                break;
+            } else {
+                screenNum = Number(SCREEN.textContent);
+                result = operate(screenNum, result, operator);
+                populateDisplay('', true);
+                if (!result) result = screenNum;
+                operator = TARGET_VALUE;
+                console.log(result);
                 break;
             }
         }
