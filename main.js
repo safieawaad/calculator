@@ -48,5 +48,10 @@ BUTTONS_CONTAINER.addEventListener('click', e => {
         result = operate(screenNum, result, operator);
         populateDisplay(result, true);
         result = undefined;
+    } else if (TARGET_VALUE == 15) {
+        screenNum = undefined;
+        result = undefined;
+        operator = undefined;
+        populateDisplay('', true);
     }
 });
