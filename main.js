@@ -54,6 +54,10 @@ BUTTONS_CONTAINER.addEventListener('click', e => {
             if (screenNum == 0 && operator == 13) result = 'undefined';
             populateDisplay(result, true);
             result = undefined;
+        } else if (isNaN(result) && screenNum == 0 && operator == 13) {
+            result = 'undefined';
+            populateDisplay(result, true);
+            result = undefined;
         }
     } else if (TARGET_VALUE == 15) {
         screenNum = undefined;
