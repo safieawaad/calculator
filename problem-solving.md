@@ -43,11 +43,12 @@
 >
 >   - An `addEventListener` attached to the `buttons-container` catches the event `click` while bubbling.
 >       - Get the `e.target.value`.
->       - Enters a `for loop` that initiates `i = 0` and ranges to `i <= 13`.
->           - Enters an `if statement` that checks whether the `target.value` (`string`) <= 9.
->               - If `true`: Then `e.target` is an operand button
->               - Call the `populateDisplay` function.
->               - `break` from the loop.
+>       - Enters an `if (e.target.value <= 13)`, if `true`: Enter the loop.
+>           - Enters a `for loop` that initiates `i = 0` and ranges to `i <= 13`.
+>               - Enters an `if statement` that checks whether the `target.value` (`string`) <= 9.
+>                   - If `true`: Then `e.target` is an operand button
+>                   - Call the `populateDisplay` function.
+>                   - `break` from the loop.
 >   - The end of the event.
 > 
 **Input:** The user clicks on `2` button. (SAME AS `1` BUTTON)
@@ -56,15 +57,16 @@
 >
 >   - An `addEventListener` attached to the `buttons-container` catches the event `click` while bubbling.
 >       - Get the `e.target.value`.
->       - Enters the same `for loop` that initiates `i = 0` and ranges to `i <= 13`. (Operators are from 10 to 13)
->           - Enters the `else if` that checks whether the `e.target.value` (`string`) <= 13.
->               - If `else if` is `true`: Then `e.target` is an operator button.
->               - Assign the number on the screen to `screenNum` variable. (`screenNum == 12`)
->               - Calls `operate` function and assign its return value to `result`.
->                   - Returns `undefined` to `result` variable. (Since the `operate` function prevents any operations without the three variables being given with an `if statement`)
->               - Calls `populateDisplay` function without an argument. (Default parameter is `''`)
->               - Assign the value of `screenNum` to `result`: `if (!result) result = screenNum;`. (`result == 12`)
->               - Assign `+` to `operator` variable. (`operator == +`)
+>       - Enters an `if (e.target.value <= 13)`, if `true`: Enter the loop.
+>           - Enters the same `for loop` that initiates `i = 0` and ranges to `i <= 13`. (Operators are from 10 to 13)
+>               - Enters the `else if` that checks whether the `e.target.value` (`string`) <= 13.
+>                   - If `else if` is `true`: Then `e.target` is an operator button.
+>                   - Assign the number on the screen to `screenNum` variable. (`screenNum == 12`)
+>                   - Calls `operate` function and assign its return value to `result`.
+>                       - Returns `undefined` to `result` variable. (Since the `operate` function prevents any operations without the three variables being given with an `if statement`)
+>                   - Calls `populateDisplay` function without an argument. (Default parameter is `''`)
+>                   - Assign the value of `screenNum` to `result`: `if (!result) result = screenNum;`. (`result == 12`)
+>                   - Assign `+` to `operator` variable. (`operator == +`)
 >   - The end of the event.
 >
 **Input:** The user clicks on `7` button. (SAME AS `1` BUTTON)

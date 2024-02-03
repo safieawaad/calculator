@@ -1,4 +1,5 @@
 const SCREEN = document.getElementById('screen');
+const BUTTONS_CONTAINER = document.getElementById('buttons-container');
 
 /* Operations functions */
 function addNumbers(result, screenNum) { return result + screenNum }
@@ -17,6 +18,20 @@ function operate(screenNum, result, operator) {
 }
 
 /* This function controls the display of the calculator's screen */
-function populateDisplay(result = '') {
-    SCREEN.textContent = result;
+function populateDisplay(result = '', eraseScreenCondition = false) {
+    if (eraseScreenCondition === true) SCREEN.textContent = result;
+    else SCREEN.textContent += result;
 }
+
+/* Interacts when any calculator button is clicked */
+BUTTONS_CONTAINER.addEventListener('click', e => {
+    const TARGET_VALUE = e.target.value;
+    if (TARGET_VALUE <= 13) {
+        for (let i = 0; i <= 13; i++) {
+            if (TARGET_VALUE <= 9) {
+                populateDisplay(TARGET_VALUE);
+                break;
+            }
+        }
+    }
+});
