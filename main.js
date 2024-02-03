@@ -4,8 +4,8 @@ let screenNum;
 let result;
 let operator;
 
-function roundNum(number) {
-    return +(Math.round(number + "e+2") + "e-2");
+function roundAccurately(num, places) {
+    return parseFloat(Math.round(num + 'e' + places) + 'e-' + places);
 }
 
 /* Operations functions */
@@ -40,7 +40,7 @@ BUTTONS_CONTAINER.addEventListener('click', e => {
                 break;
             } else {
                 screenNum = Number(SCREEN.textContent);
-                result = roundNum(operate(screenNum, result, operator));
+                result = roundAccurately(operate(screenNum, result, operator), 2);
                 populateDisplay('', true);
                 if (!result) result = screenNum;
                 operator = TARGET_VALUE;
@@ -49,7 +49,7 @@ BUTTONS_CONTAINER.addEventListener('click', e => {
         }
     } else if (TARGET_VALUE == 14) {
         screenNum = Number(SCREEN.textContent);
-        result = roundNum(operate(screenNum, result, operator));
+        result = roundAccurately(operate(screenNum, result, operator), 2);
         if (screenNum == 0 && operator == 13) result = 'undefined';
         populateDisplay(result, true);
         result = undefined;
