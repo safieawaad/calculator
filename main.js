@@ -16,7 +16,7 @@ function divideNumbers(result, screenNum) { return result / screenNum }
 
 /* This function returns the result */
 function operate(screenNum, result, operator) {
-    if (screenNum && result && operator) {
+    if (typeof screenNum === `number` && result && operator) {
         if (operator === '10') return addNumbers(result, screenNum);
         else if (operator === '11') return subtractNumbers(result, screenNum);
         else if (operator === '12') return multiplyNumbers(result, screenNum);
@@ -50,6 +50,7 @@ BUTTONS_CONTAINER.addEventListener('click', e => {
     } else if (TARGET_VALUE == 14) {
         screenNum = Number(SCREEN.textContent);
         result = roundNum(operate(screenNum, result, operator));
+        if (screenNum == 0 && operator == 13) result = 'undefined';
         populateDisplay(result, true);
         result = undefined;
     } else if (TARGET_VALUE == 15) {
