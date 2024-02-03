@@ -40,9 +40,13 @@ BUTTONS_CONTAINER.addEventListener('click', e => {
                 populateDisplay('', true);
                 if (!result) result = screenNum;
                 operator = TARGET_VALUE;
-                console.log(result);
                 break;
             }
         }
+    } else if (TARGET_VALUE == 14) {
+        screenNum = Number(SCREEN.textContent);
+        result = operate(screenNum, result, operator);
+        populateDisplay(result, true);
+        result = undefined;
     }
 });
