@@ -4,6 +4,10 @@ let screenNum;
 let result;
 let operator;
 
+function roundNum(number) {
+    return +(Math.round(number + "e+2") + "e-2");
+}
+
 /* Operations functions */
 function addNumbers(result, screenNum) { return result + screenNum }
 function subtractNumbers(result, screenNum) { return result - screenNum }
@@ -36,7 +40,7 @@ BUTTONS_CONTAINER.addEventListener('click', e => {
                 break;
             } else {
                 screenNum = Number(SCREEN.textContent);
-                result = operate(screenNum, result, operator);
+                result = roundNum(operate(screenNum, result, operator));
                 populateDisplay('', true);
                 if (!result) result = screenNum;
                 operator = TARGET_VALUE;
@@ -45,7 +49,7 @@ BUTTONS_CONTAINER.addEventListener('click', e => {
         }
     } else if (TARGET_VALUE == 14) {
         screenNum = Number(SCREEN.textContent);
-        result = operate(screenNum, result, operator);
+        result = roundNum(operate(screenNum, result, operator));
         populateDisplay(result, true);
         result = undefined;
     } else if (TARGET_VALUE == 15) {
