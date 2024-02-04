@@ -37,7 +37,7 @@
 >
 ## Steps
 
-**Problem:** 12 + 7 - 5 = 42
+**Problem:** 12 + 7 - 5 = 14
 
 **Input:** The user clicks on the `1` button.
 >
